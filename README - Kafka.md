@@ -107,8 +107,14 @@ Dentro do diretório Broker Cluster execute o comando:
 docker-compose -f docker-compose.yml up 
 ```
 
-O output deve ser similar ao da figura abaixo:
+Se você observar o ouput, os containers contendo o cluster serão criados. Após a criação dos containers, será criado um topic chamado tri. Este topic possuirá 5 partições e será replicado nos 3 brokers.
+
+O output até a criação dos containers deve ser similar ao da figura abaixo:
 ![alt text](screenshots/brokerCluster.png "Docker compose do cluster de kafka brokers")
+
+O output da criação do topic "tri" deve ser similar ao da figura abaixo:
+![alt text](screenshots/brokerCluster2.png "Docker compose do cluster de kafka brokers")
+
 
 Ao fim desta etapa, seu cluster de brokers estará cadastrado no cluster de zookeepers e pronto para servir como uma message queue a producers e consumers.
 
