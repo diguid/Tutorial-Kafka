@@ -10,8 +10,8 @@ Todas as mensagens Kafka são organizadas em topic. Se você deseja enviar uma m
 Os topics são divididos em partições. As partições recebem as mensagens enviadas pelos producers, e as armazenam para que os consumers possam acessá-las.
 
 
-Para mais detalhes em relação à arquitetura do kafka, acesse (Recomendo fortemente a leitura desses sites): 
-https://kafka.apache.org/intro
+Para mais detalhes em relação à arquitetura do kafka, acesse (Recomendo fortemente a leitura desses sites): <br />
+https://kafka.apache.org/intro<br />
 https://confluentinc.wordpress.com/2015/04/07/hands-free-kafka-replication-a-lesson-in-operational-simplicity/
 
 
@@ -146,10 +146,10 @@ OBS: publicDNS corresponde ao DNS público da instância em que esse serviço es
 ![alt text](screenshots/publicIPConsumerProducer.png "IP do host do producer e consumer")
 
 
-Mande algumas mensagens variando o índice do Test:\n
-http://publicDNS:8080/jsa/kafka/producer?data=Test1\n
-http://publicDNS:8080/jsa/kafka/producer?data=Test2
-http://publicDNS:8080/jsa/kafka/producer?data=Test3
+Mande algumas mensagens variando o índice do Test:<br />
+http://publicDNS:8080/jsa/kafka/producer?data=Test1<br />
+http://publicDNS:8080/jsa/kafka/producer?data=Test2<br />
+http://publicDNS:8080/jsa/kafka/producer?data=Test3<br />
 http://publicDNS:8080/jsa/kafka/producer?data=Test4
 
 O log exibido pelo serviço deve ser: 
