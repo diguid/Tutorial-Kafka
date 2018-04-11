@@ -98,6 +98,8 @@ Vamos agora criar o cluster de Brokers do Kafka. Para tanto, obtenha o docker-co
 
 Até o dado momento, não foi verificado como será a integração do kafka com o kubernetes, por esta razão, a conexão entre o cluster de broker e o cluster de zookeeper foi feita hardcoded dentro do arquivo docker-compose.yml. Sendo assim, para que essa conexão ocorra de forma correta, é necessário alterar o valor do campo "KAFKA_ZOOKEEPER_CONNECT:" para o endereço do host do cluster de zookeeper no formato HOST:2181. O endereço do host pode ser visualizado no console AWS, como mostrado na figura abaixo.
 
+![alt text](screenshots/publicIPKafka.png "IP do host do Cluster de Kafka")
+
 Após alterado os valores do campo mencionado acima, podemos criar o cluster.
 
 Dentro do diretório Broker Cluster execute o comando:
