@@ -113,7 +113,7 @@ O output até a criação dos containers deve ser similar ao da figura abaixo:
 ![alt text](screenshots/brokerCluster.png "Docker compose do cluster de kafka brokers")
 
 O output da criação do topic "tri" deve ser similar ao da figura abaixo:
-![alt text](screenshots/brokerCluster2.png "Docker compose do cluster de kafka brokers")
+![alt text](screenshots/brokerCluster2.PNG "Docker compose do cluster de kafka brokers")
 
 
 Ao fim desta etapa, seu cluster de brokers estará cadastrado no cluster de zookeepers e pronto para servir como uma message queue a producers e consumers.
