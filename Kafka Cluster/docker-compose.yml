@@ -1,32 +1,37 @@
-version: '3.1'
-
+version: '2'
 services:
-  zoo1:
-    image: zookeeper
-    restart: always
-    hostname: zoo1
-    ports:
-      - 2181:2181
-    environment:
-      ZOO_MY_ID: 1
-      ZOO_SERVERS: server.1=0.0.0.0:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
 
-  zoo2:
-    image: zookeeper
-    restart: always
-    hostname: zoo2
+  kafka1:
+    image: wurstmeister/kafka
     ports:
-      - 2182:2181
+      - "9092:9092"
     environment:
-      ZOO_MY_ID: 2
-      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=0.0.0.0:2888:3888 server.3=zoo3:2888:3888
+      HOSTNAME_COMMAND: curl --retry 3 --connect-timeout 2 --max-time 2  -s 169.254.169.254/latest/meta-data/public-ipv4
+      KAFKA_ADVERTISED_HOST_NAME: _{HOSTNAME_COMMAND}
+      #KAFKA_ADVERTISED_LISTENERS:  PLAINTEXT://_{HOSTNAME_COMMAND}:9092
+      KAFKA_CREATE_TOPICS: "tri:5:3"
+      KAFKA_ZOOKEEPER_CONNECT: 13.59.176.181:2181
+      KAFKA_LOG_DIRS: /kafka
+      KAFKA_BROKER_ID: 1
 
-  zoo3:
-    image: zookeeper
-    restart: always
-    hostname: zoo3
+  kafka2:
+    image: wurstmeister/kafka
     ports:
-      - 2183:2181
+      - "9093:9092"
     environment:
-      ZOO_MY_ID: 3
-      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=0.0.0.0:2888:3888
+      HOSTNAME_COMMAND: curl --retry 3 --connect-timeout 2 --max-time 2  -s 169.254.169.254/latest/meta-data/public-ipv4
+      KAFKA_ZOOKEEPER_CONNECT: 13.59.176.181:2181
+      KAFKA_LOG_DIRS: /kafka2
+      KAFKA_BROKER_ID: 2
+      KAFKA_ADVERTISED_PORT: 9093
+
+  kafka3:
+    image: wurstmeister/kafka
+    ports:
+      - "9094:9092"
+    environment:
+      HOSTNAME_COMMAND: curl --retry 3 --connect-timeout 2 --max-time 2  -s 169.254.169.254/latest/meta-data/public-ipv4
+      KAFKA_ZOOKEEPER_CONNECT: 13.59.176.181:2181
+      KAFKA_LOG_DIRS: /kafka3
+      KAFKA_BROKER_ID: 3
+      KAFKA_ADVERTISED_PORT: 9094
