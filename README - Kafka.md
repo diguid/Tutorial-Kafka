@@ -61,7 +61,7 @@ Para facilitar a identificação, clique em instances no menu à esquerda e alte
 
 ## Requerimentos
 Para executar esse tutorial, é necessário o Docker e o Docker Compose nas instâncias.
-Conecte-se por ssh nas instãncias e execute os comandos abaixo
+Conecte-se por ssh às instâncias e execute os comandos abaixo
 
 Instalação Docker:
 
