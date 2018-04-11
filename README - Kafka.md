@@ -5,7 +5,7 @@ Neste tutorial, serão exploradas as funcionalidades do Kafka: Uma plataforma de
 
 A arquitetura básica do Kafka é organizada em torno de alguns termos chaves: topics, producers, consumers e brokers.
 
-Todas as mensagens Kafka são organizadas em tópicos. Se você deseja enviar uma mensagem, você a envia para um topic específico. Do mesmo modo, se você deseja ler uma mensagem, você a lê de um topic específico. Um consumer faz pull de mensagens de um topic, enquanto os producers fazem push de mensagens para o topic. Por fim, o Kafka é um sistema distribuído, portanto, opera em cluster. Cada nó do cluster é chamado de Kafka broker.
+Todas as mensagens Kafka são organizadas em topic. Se você deseja enviar uma mensagem, você a envia para um topic específico. Do mesmo modo, se você deseja ler uma mensagem, você a lê de um topic específico. Um consumer faz pull de mensagens de um topic, enquanto os producers fazem push de mensagens para o topic. Por fim, o Kafka é um sistema distribuído, portanto, opera em cluster. Cada nó do cluster é chamado de Kafka broker.
 
 Os topics são divididos em partições. As partições recebem as mensagens enviadas pelos producers, e as armazenam para que os consumers possam acessá-las.
 
@@ -54,7 +54,7 @@ Agora basta rever se as configurações escolhidas estão corretas e clicar no b
 
 Repetir esse processo 3 vezes, assim criando 3 instâncias disintas. 
 
-Para facilitar a identificação, clique em instances no menu a direita e altere o nome das instâncias, como mostrado na figura abaixo:
+Para facilitar a identificação, clique em instances no menu à esquerda e altere o nome das instâncias, como mostrado na figura abaixo:
 
 ![alt text](screenshots/EditNameInstances.png "Alteração do nome das instâncias")
 
