@@ -98,7 +98,7 @@ Vamos agora criar o cluster de Brokers do Kafka. Para tanto, obtenha o docker-co
 
 Até o dado momento, não foi verificado como será a integração do kafka com o kubernetes, por esta razão, a conexão entre o cluster de broker e o cluster de zookeeper foi feita hardcoded dentro do arquivo docker-compose.yml. Sendo assim, para que essa conexão ocorra de forma correta, é necessário alterar o valor do campo "KAFKA_ZOOKEEPER_CONNECT:" para o endereço do host do cluster de zookeeper no formato HOST:2181. O endereço do host pode ser visualizado no console AWS, como mostrado na figura abaixo.
 
-![alt text](screenshots/publicIPKafka.png "IP do host do Cluster de Kafka")
+![alt text](screenshots/publicIPZoo.png "IP do host do Cluster de Zookeepers")
 
 Após alterado os valores do campo mencionado acima, podemos criar o cluster.
 
@@ -146,8 +146,8 @@ OBS: publicDNS corresponde ao DNS público da instância em que esse serviço es
 ![alt text](screenshots/publicIPConsumerProducer.png "IP do host do producer e consumer")
 
 
-Mande algumas mensagens variando o índice do Test:
-http://publicDNS:8080/jsa/kafka/producer?data=Test1
+Mande algumas mensagens variando o índice do Test:\n
+http://publicDNS:8080/jsa/kafka/producer?data=Test1\n
 http://publicDNS:8080/jsa/kafka/producer?data=Test2
 http://publicDNS:8080/jsa/kafka/producer?data=Test3
 http://publicDNS:8080/jsa/kafka/producer?data=Test4
