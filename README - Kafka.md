@@ -19,7 +19,7 @@ Há ainda outro elemento importante, o Zookeeper. Esse serviço é responsável 
 
 
 Neste tutorial iremos criar três estruturas, cada uma rodando em instâncias EC2 distintas, e todas dentro de containers:
-- Um cluster com 3 brokers de Kafka;
+- Um cluster com 3 brokers de Kafka, onde um topic, chamado de "tri", com 5 partições será criado e replicado nesses 3 brokers;
 - Um cluster com 3 instâncias de zookeeper para fazer o gerenciamento do cluster de brokers;
 - Um serviço que atua como Producer e Consumer que interage com um topic criado dentro do cluster de kafka.
 
