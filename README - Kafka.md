@@ -92,6 +92,7 @@ docker-compose -f docker-compose.yml up
 Pronto, seu cluster de zookeeper está operante, e você deve observar um output similar à figura abaixo:
 ![alt text](screenshots/zooCluster.png "Docker compose do cluster de zookeeper")
 
+Para maior detalhes em relação à imagem docker para o zookeeper: https://hub.docker.com/_/zookeeper/
 ### Parte 3 - Criação do cluster de Brokers
 
 Vamos agora criar o cluster de Brokers do Kafka. Para tanto, obtenha o docker-compose.yml que se encontra dentro do diretório Broker Cluster deste repositório.
@@ -117,6 +118,8 @@ O output da criação do topic "tri" deve ser similar ao da figura abaixo:
 
 
 Ao fim desta etapa, seu cluster de brokers estará cadastrado no cluster de zookeepers e pronto para servir como uma message queue a producers e consumers.
+
+Para maior detalhes em relação à imagem docker para o kafka: https://hub.docker.com/r/wurstmeister/kafka/
 
 ### Parte 4 - Criação do serviço de Consumer/Producer
 
