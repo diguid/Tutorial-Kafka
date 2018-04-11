@@ -70,7 +70,7 @@ curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
 sudo usermod -aG docker ubuntu
 ```
-Deslogue das instâncias e logue novamente para que sejam garantidos privilégis de administrador para a execução dos comandos docker.
+Deslogue das instâncias e logue novamente para que sejam garantidos privilégios de administrador para a execução dos comandos docker.
 
 Instalação Docker Compose:
 
@@ -90,7 +90,7 @@ docker-compose -f docker-compose.yml up
 ```
 
 Pronto, seu cluster de zookeeper está operante, e você deve observar um output similar à figura abaixo:
-![alt text](screenshots/EditNameInstances.png "Docker compose do cluster de zookeeper")
+![alt text](screenshots/zooCluster.png "Docker compose do cluster de zookeeper")
 
 ### Parte 3 - Criação do cluster de Brokers
 
